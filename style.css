@@ -1,0 +1,841 @@
+        /**
+    Theme Name: Lapizza
+    Theme URI:
+    Author: Gwinayi
+    Author URI: 
+    Description: Theme for restaurants
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/license/glp-2.0.html
+    Tags: restaurant, mobile first, responsive, pizza
+    Text Domain: lapizza
+**/
+        /* =============================
+       1. General Styles         */
+
+        html {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+
+        h4 {
+            font-size: 24px;
+        }
+
+        .primary-text {
+            color: #a61206;
+        }
+
+        .button {
+            background-color: #a61206;
+            color: #fff;
+            font-family: 'Open Sans', snas-serif;
+            font-size: 16px;
+            width: auto;
+            padding: 15px 80px;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .primary {
+            background-color: #a61206;
+            transition: all .5s ease;
+        }
+
+        .primary:hover {
+            background-color: #f19f30;
+        }
+
+        .clear,
+        .clear::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 0;
+        }
+
+        .sr-text,
+        .screen-reader-text {
+            display: none;
+        }
+        /* =============================
+       2. Header Styles         */
+
+        header.site-header {
+            border-bottom: 1px solid #c1c1c1;
+            padding-bottom: 30px;
+        }
+
+        div.logo {
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+            div.logo {
+                text-align: left;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            div.logo {
+                text-align: center;
+            }
+        }
+
+        img.logoimage {
+            width: 250px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            header.site-header>.container {
+                position: relative;
+            }
+            header.site-header .header-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .address {
+            display: block;
+            clear: both;
+            padding-top: 10px;
+        }
+
+        .address p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .address p {
+                text-align: right;
+            }
+        }
+        /* =============================
+       2.1 Social  Menu Styles         */
+
+        nav.socials ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            nav.socials ul {
+                float: right;
+            }
+        }
+
+        nav.socials ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav.socials ul li a:before {
+            font-family: 'FontAwesome';
+            display: inline-block;
+            font-size: 30px;
+            padding: 0 5px;
+            vertical-align: top;
+            content: '\f231';
+            color: #000;
+            -webkit-font-smoothing: antialiazed;
+        }
+
+        nav.socials ul li a[href*="pinterest.com"]:before {
+            content: '\f231';
+        }
+
+        nav.socials ul li a[href*="facebook.com"]:before {
+            content: '\f09a';
+        }
+
+        nav.socials ul li a[href*="twitter.com"]:before {
+            content: '\f099';
+        }
+
+        nav.socials ul li a[href*="youtube.com"]:before {
+            content: '\f166';
+        }
+
+        nav.socials ul li a[href*="instagram.com"]:before {
+            content: '\f16d';
+        }
+        /* =============================
+       2.2 Main  Menu Styles         */
+
+        nav.site-nav {
+            display: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            nav.site-nav {
+                display: block;
+            }
+        }
+
+        nav.site-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: table;
+        }
+
+        @media only screen and (min-width: 768px) {
+            nav.site-nav ul li {
+                width: 1%;
+                display: table-cell;
+            }
+        }
+
+        nav.site-nav ul li a {
+            text-align: center;
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 0;
+            font-family: 'Arial';
+            text-decoration: none;
+            color: grey;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav.site-nav ul li.current_page_item a {
+            border-bottom: 8px solid #a61206;
+        }
+        /* =============================
+       2.2 Responsive Menu Styles         */
+
+        @media only screen and (max-width: 767px) {
+            .mobile-menu a {
+                height: 40px;
+                background-color: #a61206;
+                width: 100%;
+                display: block;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                text-decoration: none;
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+        }
+        /* =============================
+       3. Hero Styles         */
+
+        .hero {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 400px;
+            display: table;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .hero-content {
+            display: table-cell;
+            color: #fff;
+            z-index: 2;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .hero-text {
+                width: 100%;
+            }
+        }
+
+        .main-content {
+            padding: 60px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .main-content {
+                margin-top: -90px;
+                border-radius: 8px;
+                border-top: 1px solid #a61206;
+            }
+        }
+
+        .content-text p {
+            font-size: 18px;
+            line-height: 50px;
+        }
+        /* =============================
+       3. About Us Box Styles         */
+
+        .box-info,
+        .single-box {
+            text-align: center;
+            width: 100%;
+            color: #fff;
+        }
+
+        .box-info .single-box img {
+            width: 100%;
+            display: block;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .box-info .single-box {
+                width: 50%;
+                float: left;
+            }
+            .box-info .single-box:last-child {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .box-info .single-box,
+            .box-info .single-box:last-child {
+                width: 33%;
+            }
+        }
+
+        .box-info .single-box:nth-child(1) {
+            background-color: #f19f38;
+        }
+
+        .box-info .single-box:nth-child(2) {
+            background-color: #127427;
+        }
+
+        .box-info .single-box:nth-child(3) {
+            background-color: #a61206;
+        }
+
+        .box-info .single-box h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .box-info .single-box p {
+            margin-bottom: 0;
+        }
+
+        .single-box .content-box {
+            padding: 20px;
+            vertical-align: middle;
+            display: table-cell;
+        }
+        /* =============================
+       4. Footer        */
+
+        footer {
+            border-top: 1px solid #c1c1c1;
+            margin-top: 30px;
+            padding: 30px 0;
+            border-top: 1 1px solid #c1c1c1;
+            text-align: center;
+        }
+
+        footer nav ul {
+            list-style: none;
+        }
+
+        footer nav ul li {
+            display: inline;
+        }
+
+        footer nav ul li:last-child .separator {
+            display: none;
+        }
+
+        footer nav ul li a {
+            color: #000;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer .location {
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+        }
+
+        footer p.copyright {
+            margin-top: 10px;
+        }
+        /* =============================
+       4. Grid       */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .container-grid {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+            .container-grid:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            [class*='columns'] {
+                padding: 0 10px;
+                float: left;
+            }
+            .columns2-4 {
+                width: 50%;
+            }
+            .columns1-4 {
+                width: 25%;
+            }
+            .columns3-4 {
+                width: 75%;
+            }
+            .columns1-3 {
+                width: 33.3%;
+            }
+            .columns2-3 {
+                width: 66.6%;
+            }
+        }
+        /* =============================
+       4. Specialties       */
+
+        .our-specialties {
+            padding: 0 60px;
+        }
+
+        .specialty-content {
+            padding: 20px;
+        }
+
+        .specialty-content h4 {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dfdfdd;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 15px 0;
+        }
+
+        .specialty-content a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .specialty-content h4 span {
+            float: right;
+            font-size: 30px;
+            color: #f19f30;
+            font-family: 'Open Sans', sans- serif;
+        }
+
+        .specialty-content p {
+            color: #3d3d3d;
+            line-height: 30px;
+        }
+        /* ================================
+    4. Single Specialties Template      */
+
+        .single-specialties p.ingredients,
+        .single-specialties p.price {
+            color: #a61206;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .single-specialties p.price span {
+            color: #000;
+        }
+        /* ================================
+    5. Blog     */
+
+        article.entry {
+            margin-top: 30px;
+        }
+
+        header.entry-header {
+            margin-top: 20px;
+        }
+
+        header.entry-header .date,
+        .entry-info .date {
+            background-color: #f19f30;
+            float: left;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            padding-top: 5px;
+            margin-right: 20px;
+        }
+
+        header.entry-header .date time,
+        .entry-info .date time {
+            font-size: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+        header.entry-header .date time span,
+        .entry-info .date time span {
+            text-transform: uppercase;
+            font-size: 16px;
+            display: block;
+        }
+
+        header.entry-header .entry-title {
+            float: right;
+            width: calc(100% - 90px);
+        }
+
+        header.entry-header h2 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        header.entry-header p.author,
+        .entry-info p.author {
+            text-transform: uppercase;
+            color: #000;
+            margin-top: 10px;
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+        }
+
+        .content-text {
+            margin-top: 27px;
+        }
+
+        .entry-info p.author {
+            display: inline;
+            float: left;
+            margin-top: 38px;
+        }
+
+        p.author i {
+            font-size: 30px;
+            color: #f19f30;
+        }
+
+        .entry-content p {
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+
+        form.searchform {
+            position: relative;
+        }
+
+        form.searchform #searchsubmit {
+            position: absolute;
+            top: 0;
+            right: 82px;
+            width: 42px;
+            height: 42px;
+            background-position: center center;
+            border: none;
+            background-color: #a61206;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-image: url('img/search.png');
+            text-indent: -9999px;
+        }
+
+        form.searchform #s {
+            padding: 10px;
+            width: 70%;
+        }
+
+        .sidebar .widget {
+            margin-bottom: 20px;
+        }
+
+        .sidebar .widget h3 {
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .sidebar .widget ul {
+            list-style: none;
+        }
+
+        .sidebar .widget ul li {
+            margin-bottom: 20px;
+        }
+
+        aside.sidebar {
+            margin-top: -25px;
+        }
+
+        .sidebar .widget ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .sidebar .widget ul li a:hover {
+            color: #f19f30;
+        }
+        /* =============================
+       5. Comments       */
+
+        .comment-respond h3 {
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .commments {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .commments {
+                width: 60%;
+            }
+        }
+
+        .comment-respond form label {
+            width: 200px;
+            display: inline-block;
+            text-align: right;
+            padding-right: 20px;
+            font-weight: 700;
+        }
+
+        .comment-respond form input,
+        .comment-respond form textarea {
+            padding: 10px;
+            width: calc(100% - 220px);
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        .comment-respond form input:focus,
+        .comment-respond form textarea:focus {
+            border: 1px solid #f19f30;
+            box-shadow: 0 0 5px #f19f30;
+        }
+
+        .comment-respond form input[type='submit']:focus {
+            border: none;
+            box-shadow: 0 0 5px #127427;
+        }
+
+        .comment-respond form input[type='submit'] {
+            display: inline-block;
+            background-color: #127427;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            width: 20%;
+            border-radius: 0;
+        }
+
+        p.form-submit {
+            text-align: center;
+        }
+
+        p.logged-in-as a {
+            color: #a61206;
+            text-align: center;
+            display: block;
+        }
+
+        p.logged-in-as a:last-child {
+            color: blue;
+        }
+
+        .comment-notes {
+            text-align: center;
+        }
+        /* =============================
+       5.1 Comments List      */
+
+        ol.commentlist {
+            list-style: none;
+        }
+
+        ol.commentlist li.comment {
+            background-color: #e1e1e1;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        ol.commentlist li.comment cite {
+            color: #f19f38;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        li.comment .comment-author {
+            margin-bottom: 10px;
+        }
+
+        li.comment a {
+            color: #127427;
+            text-decoration: none;
+        }
+
+        li.comment ul.children {
+            list-style: none;
+        }
+
+        li.comment ul.children li {
+            background: #fff;
+            margin-top: 20px;
+        }
+        /* =============================
+       6. Gallery      */
+
+        .content-text #gallery-1 .gallery-item {
+            width: 50%;
+            margin: 0;
+            padding: 2px 5px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .content-text #gallery-1 .gallery-item {
+                width: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .content-text #gallery-1 .gallery-item {
+                width: 100%;
+            }
+        }
+
+        .content-text #gallery-1 img {
+            border: none;
+        }
+
+        #gallery-1 {
+            padding-bottom: 90px;
+        }
+        /* =============================
+       6. Contact US     */
+
+        .reservation {
+            background-image: url('./img/bg_contact.jpg');
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .reservation-info {
+                margin-left: 50%;
+            }
+        }
+
+        form.reservation-form h2 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        form.reservation-form .field {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        form.reservation-form .field input,
+        form.reservation-form .field textarea,
+        {
+            padding: 15px 10px;
+            border: 3px solid #000;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        form.reservation-form .field textarea {
+            height: 200px;
+        }
+
+        form.reservation-form ::-webkit-input-placeholder {
+            color: #000 !important;
+        }
+
+        form.reservation-form ::moz-placeholder {
+            color: #000 !important;
+        }
+
+        form.reservation-form :moz-placeholder {
+            color: #000 !important;
+        }
