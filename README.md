@@ -1,6 +1,6 @@
 # lapizza
 
-## A custom restaurant wordpress resonsive theme
+## A custom restaurant wordpress responsive theme
 
 * jQuery
 * Fluidbox
